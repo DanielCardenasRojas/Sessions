@@ -1,0 +1,19 @@
+<%- include("tamplates/encabezado") %>
+<%- include("tamplates/menu") %>
+
+ <form action="/revisar" method="post" id="formulario">
+ <div >
+     <input type="text" name="usuario" id="usuario" placeholder="Usuario" autofocus>
+     <span id="mensajeUsuario"></span>
+ </div>
+ <div >
+     <input type="text" name="Password" id="Password" placeholder="Password" autofocus>
+     <span id="mensajePasword"></span>
+ </div>
+
+ <div >
+     <button type="submit">Iniciar sesión</button>
+ </div>
+
+</form>
+<%- include("tamplates/pie") %>
