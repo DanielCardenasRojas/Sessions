@@ -3,13 +3,13 @@ var usuarios = require("./rutas/usuarios");
 var path=require ("path");
 var session=require("express-session");
 require("dotenv").config();
-
+//esto es un cambio
 var app=express();
 app.set("view engine","ejs");
 app.use("/web",express.static(path.join(__dirname,"/web")));
 app.use(express.urlencoded({extended:true}));
 app.use(session({
-    secret:PerformanceObserverEntryList.env.SECRETO_SESSION,
+    secret:process.env.SECRETO_SESSION,
     resave:true,
     saveUninitialized:true
 }));
